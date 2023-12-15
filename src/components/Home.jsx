@@ -14,43 +14,39 @@ const images = [
     image: require("../assets/images/image-1.jpg"),
     title: "Card Title",
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    link: "#pricing",
+    link: "#home",
   },
   {
     id: 2,
     image: require("../assets/images/image-2.jpg"),
     title: "Card Title",
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    link: "#pricing",
+    link: "#home",
   },
   {
     id: 2,
     image: require("../assets/images/image-3.jpg"),
     title: "Card Title",
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    link: "#pricing",
+    link: "#home",
   },
 ];
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <Container>
-        <Row>
-          <Col>
-            <Carousel className="mb-2">
-              {images.map((image) => (
-                <Carousel.Item>
-                  <Image src={image.image} />
-                  <Carousel.Caption className="carousel-caption">
-                    <h2 className="carousel-title">{image.title}</h2>
-                    <p className="carousel-text">{image.text}</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
-        </Row>
+        <Carousel className="mt-5 mb-2">
+          {images.map((image) => (
+            <Carousel.Item>
+              <Image src={image.image} />
+              <Carousel.Caption className="carousel-caption">
+                <h2 className="carousel-title">{image.title}</h2>
+                <p className="carousel-text">{image.text}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
 
         <Row>
           {images.map((image) => (
@@ -63,9 +59,7 @@ const Home = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Button variant="primary" href={image.link}>
-                    Go somewhere
-                  </Button>
+                  <Button href={image.link}>Go somewhere</Button>
                 </Card.Body>
               </Card>
             </Col>

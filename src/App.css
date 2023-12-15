@@ -25,3 +25,7 @@ img {
 .icon {
   margin: 0 10px;
 }
+
+.contact-textarea {
+  resize: none;
+}
