@@ -24,8 +24,29 @@ const images = [
     link: "#home",
   },
   {
-    id: 2,
+    id: 3,
     image: require("../assets/images/image-3.jpg"),
+    title: "Card Title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    link: "#home",
+  },
+  {
+    id: 4,
+    image: require("../assets/images/image-4.jpg"),
+    title: "Card Title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    link: "#home",
+  },
+  {
+    id: 5,
+    image: require("../assets/images/image-5.jpg"),
+    title: "Card Title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    link: "#home",
+  },
+  {
+    id: 6,
+    image: require("../assets/images/image-6.jpg"),
     title: "Card Title",
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
     link: "#home",
@@ -38,7 +59,7 @@ const Home = () => {
       <Container>
         <Carousel className="mt-5 mb-2">
           {images.map((image) => (
-            <Carousel.Item>
+            <Carousel.Item key={image.id}>
               <Image src={image.image} />
               <Carousel.Caption className="carousel-caption">
                 <h2 className="carousel-title">{image.title}</h2>
@@ -48,9 +69,9 @@ const Home = () => {
           ))}
         </Carousel>
 
-        <Row>
+        <Row className="justify-content-center">
           {images.map((image) => (
-            <Col md={4}>
+            <Col md={4} key={image.id}>
               <Card className="my-2">
                 <Card.Img variant="top" src={image.image} />
                 <Card.Body>
