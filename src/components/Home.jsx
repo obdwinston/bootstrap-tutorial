@@ -71,7 +71,7 @@ const Home = () => {
 
         <Row className="justify-content-center">
           {images.map((image) => (
-            <Col md={4} key={image.id}>
+            <Col lg={4} md={6} key={image.id}>
               <Card className="my-2">
                 <Card.Img variant="top" src={image.image} />
                 <Card.Body>
