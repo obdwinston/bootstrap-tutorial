@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Fade from "react-bootstrap/Fade";
 
 const images = [
   {
@@ -54,6 +55,13 @@ const images = [
 ];
 
 const Home = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(!show);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div id="home">
       <Container>
@@ -72,17 +80,19 @@ const Home = () => {
         <Row className="justify-content-center">
           {images.map((image) => (
             <Col lg={4} md={6} key={image.id}>
-              <Card className="my-2">
-                <Card.Img variant="top" src={image.image} />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button href={image.link}>Go somewhere</Button>
-                </Card.Body>
-              </Card>
+              <Fade in={show}>
+                <Card className="my-2">
+                  <Card.Img variant="top" src={image.image} />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                    <Button href={image.link}>Go somewhere</Button>
+                  </Card.Body>
+                </Card>
+              </Fade>
             </Col>
           ))}
         </Row>
