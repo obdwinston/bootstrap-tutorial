@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Map from "./Map";
+import Maps from "./Maps";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -22,7 +22,7 @@ const Contact = () => {
     <div id="contact" className="col col-md-8 mx-auto">
       <h2 className="text-center text-muted mb-3">Contact Us</h2>
 
-      <Map />
+      <Maps />
 
       <Form onSubmit={submitHandler}>
         <Row>
