@@ -50,8 +50,8 @@ const Products = () => {
               <Card className="my-2">
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
+                  <Card.Title className="text-truncate">Card Title</Card.Title>
+                  <Card.Text className="text-truncate">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
@@ -62,7 +62,7 @@ const Products = () => {
           ))}
         </Row>
 
-        <Pagination className="items-pagination">{pages}</Pagination>
+        <Pagination className="products-pagination">{pages}</Pagination>
       </Container>
     </div>
   );
