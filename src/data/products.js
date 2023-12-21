@@ -41,6 +41,13 @@ const products = [
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
     link: "#home",
   },
+  {
+    id: 7,
+    image: require("../assets/images/image-7.jpg"),
+    title: "Card Title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    link: "#home",
+  },
 ];
 
 export default products;

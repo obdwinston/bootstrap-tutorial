@@ -30,7 +30,7 @@ const Maps = () => {
 
           {open && (
             <InfoWindow position={position} onCloseClick={() => setOpen(false)}>
-              <h6>Tomo Japanese Language School</h6>
+              <h6>Business</h6>
               <p>@ Singapore Shopping Centre</p>
             </InfoWindow>
           )}
