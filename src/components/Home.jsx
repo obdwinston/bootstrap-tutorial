@@ -7,16 +7,20 @@ import Container from "react-bootstrap/Container";
 import products from "../data/products";
 
 const Home = () => {
+  const count = 5; // number of latest items
+
   return (
     <div id="home">
       <Container>
         <Carousel className="mt-5 mb-2">
-          {products.map((product) => (
+          {products.slice(0, count).map((product) => (
             <Carousel.Item key={product.id}>
               <Image src={product.image} />
               <Carousel.Caption className="carousel-caption">
-                <h2 className="carousel-title">{product.title}</h2>
-                <p className="carousel-text">{product.text}</p>
+                <h2 className="carousel-title text-truncate">
+                  {product.title}
+                </h2>
+                <p className="carousel-text text-truncate">{product.text}</p>
               </Carousel.Caption>
             </Carousel.Item>
           ))}

@@ -50,11 +50,10 @@ const Products = () => {
               <Card className="my-2">
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
-                  <Card.Title className="text-truncate">Card Title</Card.Title>
-                  <Card.Text className="text-truncate">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
+                  <Card.Title className="text-truncate">
+                    {item.title}
+                  </Card.Title>
+                  <Card.Text className="text-truncate">{item.text}</Card.Text>
                   <Button href={item.link}>Go somewhere</Button>
                 </Card.Body>
               </Card>
